@@ -1,0 +1,235 @@
+/* ১. গ্লোবাল রিলিজ ও ফন্ট সেটআপ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* ২. নেভিগেশন বার (Header) */
+header {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h1 {
+    font-size: 24px;
+    color: #1abc9c;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #1abc9c;
+}
+
+/* ৩. হিরো সেকশন (Hero Section) */
+#hero {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(44, 62, 80, 0.85)), url('https://via.placeholder.com/1200x600') no-repeat center center/cover;
+    height: 70vh;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h2 {
+    font-size: 45px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+#hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: #eceff1;
+}
+
+/* বাটন স্টাইল */
+.btn {
+    display: inline-block;
+    background-color: #1abc9c;
+    color: #fff;
+    padding: 12px 35px;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.3);
+}
+
+.btn:hover {
+    background-color: #16a085;
+    transform: translateY(-2px);
+}
+
+/* ৪. কমন সেকশন লেআউট */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    position: relative;
+    color: #2c3e50;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background-color: #1abc9c;
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+/* ৫. আমার সম্পর্কে ও স্কিল (About & Skills) */
+.about-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    font-size: 18px;
+    text-align: justify;
+}
+
+.skills {
+    flex: 1;
+}
+
+.skill-bar {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #34495e;
+}
+
+.bar {
+    background-color: #e0e0e0;
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.progress {
+    background-color: #1abc9c;
+    height: 100%;
+    border-radius: 6px;
+    transition: width 1s ease-in-out;
+}
+
+/* ৬. প্রজেক্ট গ্রিড (Projects Section) */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: 0.3s ease;
+    border-top: 4px solid transparent;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-top: 4px solid #1abc9c;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.project-card h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.project-card p {
+    color: #7f8c8d;
+    font-size: 15px;
+}
+
+/* ৭. যোগাযোগ সেকশন (Contact Section) */
+#contact {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+}
+
+#contact p {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+#contact a {
+    color: #1abc9c;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#contact a:hover {
+    color: #16a085;
+    text-decoration: underline;
+}
+
+/* ৮. ফুটার (Footer) */
+footer {
+    background-color: #1a252f;
+    color: #bdc3c7;
+    text-align: center;
+    padding: 25px 0;
+    font-size: 14px;
+}
